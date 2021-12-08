@@ -4,4 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validatas :name,presence: true
+
+  enum gender: { man: 0, woman: 1 }
 end
