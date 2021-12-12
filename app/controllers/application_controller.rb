@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
 #サインアップ時にnameカラムとgenderカラムを保存できるように許可
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :gender])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :self_introduction])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :self_introduction, :profile_image])
+
   end
 
 end
